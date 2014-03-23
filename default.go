@@ -12,7 +12,7 @@ func (this *st) Echo() {
 }
 
 func (this *st) Echo2() {
-	fmt.Println("echo--------------------()")
+	fmt.Println("echo-------   -------------()")
 }
 
 var xmlstr string = `<root>

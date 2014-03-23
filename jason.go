@@ -13,7 +13,7 @@ type MyData struct {
 
 func main() {
 	var detail MyData
-	//啊名为
+	//啊名为   v发发
 	detail.Name = "1"
 	detail.Other = 2
 
