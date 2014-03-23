@@ -1,0 +1,59 @@
+{
+    //网站名称
+	"website": "gocool framework v1.0",
+
+	//网站路径
+	"basePath": "d:/workspace/gocool",
+
+	//网站插件
+	"extension": "/gocool/extensions.go",
+
+	//多语言设置
+	"language": "zh-cn",
+
+	//网站主题
+	"theme": "default",
+
+	///数据库配置
+	"db": {
+		"connectionString": "mysql:local",
+		"port":             3306,
+		"DatabaseName":     "gocoolDB",
+		"password":         "123456",
+	},
+
+	//路由规则
+	"routes": {
+		"format": "default",
+	},
+
+	//组件配置
+	"components": {
+		"cache": {
+			"class": "/gocool/caching/fileCahe.go",
+		},
+		"user": {
+			"identityClass":   "app/models/User",
+			"enableAutoLogin": true,
+		},
+
+		"errorHandler": {
+			"errorAction": "site/error",
+		},
+
+		"mail": {
+			"class":            "yii/swiftmailer/Mailer",
+			"useFileTransport": true,
+		},
+
+		"log": {
+			"traceLevel": GOCOOL_DEBUG,
+			"targets": {
+				{
+					"class":  "yii/log/FileTarget",
+					"levels": {"error", "warning"},
+				},
+			},
+		},
+	},
+}
